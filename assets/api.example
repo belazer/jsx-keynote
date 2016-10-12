@@ -1,0 +1,30 @@
+public class PaywallStateTest extends BaseApiTest{
+
+    private Paywall expectedPaywallState;
+    private final static boolean PAYWALL_STATE = true;
+
+    @Override
+    @Before
+    public void setup() {
+        super.setup();
+        expectedPaywallState = new Paywall(PAYWALL_STATE);
+        addPathToBaseTarget("paywall");
+        addPathToBaseTarget("state");
+    }
+
+    @Test
+    public void testSuccessfulPaywallState() throws PlenigoException{
+        Paywall actualPaywallState = getBaseTarget()
+                .request()
+                .header("plenigoToken", generateToken())
+                .get(Paywall.class);
+
+        assertEquals(expectedPaywallState.isEnabled(), actualPaywallState.isEnabled());
+    }
+
+    @Test
+    public void testNoTokenPaywallState(){
+        testNoToken();
+    }
+
+}
