@@ -33,6 +33,7 @@ import preloader from "spectacle/lib/utils/preloader";
 import createTheme from "spectacle/lib/themes/default";
 
 import CodeSplit from "./codesplit";
+import Code from "./code";
 // Import custom component
 import Interactive from "../assets/interactive";
 
@@ -81,7 +82,14 @@ export default class Presentation extends React.Component {
               <Appear><ListItem>Inhalt</ListItem></Appear>
             </List>
           </Slide>
+          <Slide bgColor="tertiary">
+            <Code template={`<p>
+Hallo
+<Component name="World" />
+</p>
 
+const Component = ({name}) => <div>{name}</div>`} />
+          </Slide>
         </Deck>
       </Spectacle>
     );
