@@ -40,7 +40,7 @@ class Code extends Component {
             <Heading size={5} caps textColor="primary">
               Transformed
             </Heading>
-            <CodeEdit value={this.transform(this.state.text)}/>
+            <CodeEdit value={this.transform(this.state.text)} readOnly/>
           </Fill>
         </Layout>
       </div>
