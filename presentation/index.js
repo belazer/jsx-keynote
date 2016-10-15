@@ -302,15 +302,6 @@ export default class Presentation extends React.Component {
             </List>
           </Slide>
 
-          <Slide align="center top" bgColor="primary">
-            <Heading size={2} caps fit textColor="tertiary">
-              View: React
-            </Heading>
-            <CodeSplit source={require("raw!../assets/interactive.example")}>
-              <Interactive/>
-            </CodeSplit>
-          </Slide>
-
           <Slide bgColor="tertiary" notes="How Redux works.">
             <Image src={images.reduxAnimation.replace("/", "")} margin="0px auto 40px" height="60vh"/>
             <Heading size={3} caps textColor="primary" textFont="primary">
