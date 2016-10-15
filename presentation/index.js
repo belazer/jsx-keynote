@@ -77,15 +77,38 @@ export default class Presentation extends React.Component {
             Inhalt
             </Heading>
             <List textColor="secondary" textAlign="left">
-              <Appear><ListItem>Inhalt</ListItem></Appear>
-              <Appear><ListItem>Inhalt</ListItem></Appear>
-              <Appear><ListItem>Inhalt</ListItem></Appear>
-              <Appear><ListItem>Inhalt</ListItem></Appear>
+              <Appear><ListItem>Was ist JSX?</ListItem></Appear>
+              <Appear><ListItem>Bezug zu XML</ListItem></Appear>
+              <Appear><ListItem>Beispiele</ListItem></Appear>
             </List>
           </Slide>
+
+          <Slide bgColor="tertiary">
+            <Heading size={4} caps lineHeight={1.5} textColor="primary">
+            Was ist JSX?
+            </Heading>
+            <List textColor="secondary" textAlign="left">
+              <Appear><ListItem>XML-ähnliche Syntax-Erweiterung zu ECMAScript</ListItem></Appear>
+              <Appear><ListItem>Wird von Preprozessoren transformiert</ListItem></Appear>
+              <Appear><ListItem>Besonders im Zusammenhang mit React zu finden</ListItem></Appear>
+            </List>
+          </Slide>
+
+          <Slide bgColor="tertiary">
+            <Heading size={4} caps lineHeight={1.5} textColor="primary">
+            Bezug zu XML
+            </Heading>
+            <List textColor="secondary" textAlign="left">
+              <Appear><ListItem>Platzhalter</ListItem></Appear>
+              <Appear><ListItem>Platzhalter</ListItem></Appear>
+              <Appear><ListItem>Platzhalter</ListItem></Appear>
+            </List>
+          </Slide>
+
           <Slide bgColor="tertiary">
             <Code template={Example.jsx} />
           </Slide>
+
         </Deck>
       </Spectacle>
     );
