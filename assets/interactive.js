@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Heading } from "spectacle";
-import Tri from "react-trianglify";
 
 export default class Interactive extends Component {
   constructor() {
@@ -35,10 +34,10 @@ export default class Interactive extends Component {
         </Heading>
       {this.state.count < 5 ?
         <div>
-          <Tri seed={this.state.count * 10}/>
+          <p>{this.state.count * 10}</p>
           <button style={styles} type="button" onClick={this.handleClick}>Click Me</button>
         </div> :
-          <Tri seed={this.state.count} cellSize={25} />
+          <p>{this.state.count}</p>
         }
       </div>
     );
