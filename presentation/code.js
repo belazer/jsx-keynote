@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 import {
+  Appear,
   CodePane,
   Fill,
   Layout,
@@ -29,18 +30,22 @@ class Code extends Component {
     return (
       <div>
         <Layout style={{ marginLeft: -400 }}>
-          <Fill style={{paddingRight: "5px"}}>
-            <Heading size={5} caps textColor="primary">
-              JSX
-            </Heading>
-            <CodeEdit onChange={this.handleChange} value={this.state.text}/>
-          </Fill>
-          <Fill style={{paddingLeft: "5px"}}>
-            <Heading size={5} caps textColor="primary">
-              Transformed
-            </Heading>
-            <CodeEdit value={this.transform(this.state.text)} readOnly/>
-          </Fill>
+          <Appear>
+            <Fill style={{paddingRight: "5px"}}>
+              <Heading size={5} caps textColor="primary">
+                JSX
+              </Heading>
+              <CodeEdit onChange={this.handleChange} value={this.state.text}/>
+            </Fill>
+          </Appear>
+          <Appear>
+            <Fill style={{paddingLeft: "5px"}}>
+              <Heading size={5} caps textColor="primary">
+                Transformed
+              </Heading>
+              <CodeEdit value={this.transform(this.state.text)} readOnly/>
+            </Fill>
+          </Appear>
         </Layout>
       </div>
     );
