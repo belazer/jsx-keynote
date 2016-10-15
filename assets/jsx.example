@@ -1,0 +1,6 @@
+<p>
+  Hallo
+  <Component name="World" />
+</p>
+
+const Component = ({name}) => <div>{name}</div>

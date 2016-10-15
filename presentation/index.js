@@ -34,16 +34,17 @@ import createTheme from "spectacle/lib/themes/default";
 
 import CodeSplit from "./codesplit";
 import Code from "./code";
-// Import custom component
-import Interactive from "../assets/interactive";
-
+// Import Examples
+import Example from './Example';
 // Require CSS
 require("normalize.css");
 require("spectacle/lib/themes/default/index.css");
 
 
 const images = {
-  coding: require("../assets/coding.jpg")
+  coding: require("../assets/coding.jpg"),
+  control: require("../assets/control.jpg"),
+  website: require("../assets/website.jpg"),
 };
 
 preloader(images);
@@ -62,7 +63,7 @@ export default class Presentation extends React.Component {
       <Spectacle theme={theme}>
         <Deck transition={["fade", "slide"]} transitionDuration={500} progress="bar">
 
-          <Slide bgImage={images.coding} bgDarken={0.65}>
+          <Slide bgColor="primary">
             <Heading size={1} caps textColor="tertiary">
               JSX
             </Heading>
@@ -83,12 +84,7 @@ export default class Presentation extends React.Component {
             </List>
           </Slide>
           <Slide bgColor="tertiary">
-            <Code template={`<p>
-Hallo
-<Component name="World" />
-</p>
-
-const Component = ({name}) => <div>{name}</div>`} />
+            <Code template={Example.jsx} />
           </Slide>
         </Deck>
       </Spectacle>

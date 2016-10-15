@@ -22,7 +22,6 @@ class Code extends Component {
     this.setState({text: newText});
   }
   transform(input) {
-    console.log(transform);
     return transform(input, { presets: ['es2015', 'react', 'stage-2'] }).code;
     // return input;
   }
