@@ -12,7 +12,7 @@ import {
   Heading,
   Image,
   Layout,
-  // Link,
+  Link,
   ListItem,
   List,
   Markdown,
@@ -113,6 +113,18 @@ export default class Presentation extends React.Component {
             <Code template={Example.jsx} />
           </Slide>
 
+          <Slide bgColor="tertiary">
+            <Heading size={4} caps lineHeight={1.5} textColor="primary">
+              Andere XML-Ähnliche Sprachergänzungen
+            </Heading>
+            <Appear>
+              <List textColor="secondary" textAlign="left">
+                <ListItem><Link href="https://github.com/insin/msx">MSL (JSX for Mithrill)</Link></ListItem>
+                <ListItem><Link href="https://github.com/pzavolinsky/elmx">elmx (JSX for Elm)</Link></ListItem>
+                <ListItem><Link href="https://github.com/treycordova/nativejsx">nativejsx (JSX without React)</Link></ListItem>
+              </List>
+            </Appear>
+          </Slide>
         </Deck>
       </Spectacle>
     );
