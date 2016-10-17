@@ -34,12 +34,12 @@ import createTheme from "spectacle/lib/themes/default";
 
 import CodeSplit from "./codesplit";
 import TwoPane from './TwoPane';
-import Code from "./code_v2";
+import Code from "./Code";
 // Import Examples
 import Example from './Example';
 // Require CSS
-require("normalize.css");
-require("spectacle/lib/themes/default/index.css");
+import 'normalize.css';
+import "spectacle/lib/themes/default/index.css";
 
 
 const images = {
@@ -107,15 +107,6 @@ export default class Presentation extends React.Component {
               <Appear><ListItem>Strukturierung mit child-Elementen</ListItem></Appear>
               <Appear><ListItem>Baumstruktur</ListItem></Appear>
             </List>
-          </Slide>
-
-          <Slide bgColor="tertiary">
-            <TwoPane
-              leftHeading="JSX"
-              Left={<Text></Text>}
-              rightHeading="Transformed"
-              Right={<div style={{backgroundColor:'red', height: '100%', width: '100%'}}></div>}
-            />
           </Slide>
 
           <Slide bgColor="tertiary">

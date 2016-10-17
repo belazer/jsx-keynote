@@ -14,17 +14,20 @@ const PaneHeading = ({title}) => (
 );
 
 const TwoPane = ({Left, Right, leftHeading, rightHeading}) => (
-  <Layout style={{ width:'100%', height: '100%'}}>
+  <Layout>
     <Appear>
-      <Fill style={{width: '50%'}}>
+      <Fill>
         <PaneHeading title={leftHeading} />
-        {Left}
+          {Left}
       </Fill>
     </Appear>
+    <Fill>
+      <div style={{width: 20}}></div>
+    </Fill>
     <Appear>
-      <Fill style={{width: '50%'}}>
+      <Fill>
         <PaneHeading title={rightHeading} />
-        {Right}
+          {Right}
       </Fill>
     </Appear>
   </Layout>

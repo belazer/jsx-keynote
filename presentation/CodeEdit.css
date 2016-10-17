@@ -1,4 +1,5 @@
-.CodeMirror {
+.CodeMirror,.ReactCodeMirror {
   text-align: left;
+  font-size: 12pt;
   height: auto;
 }

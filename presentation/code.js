@@ -1,12 +1,5 @@
 import React, { Component } from "react";
-
-import {
-  Appear,
-  CodePane,
-  Fill,
-  Layout,
-  Heading
-} from "spectacle";
+import TwoPane from './TwoPane';
 
 import {transform} from 'babel-standalone';
 import CodeEdit from "./CodeEdit";
@@ -28,44 +21,14 @@ class Code extends Component {
   }
   render() {
     return (
-      <div>
-        <Layout style={{ marginLeft: -200, zoom: 0.6 }}>
-          <Appear>
-            <Fill style={{paddingRight: "5px"}}>
-              <Heading size={5} caps textColor="primary">
-                JSX
-              </Heading>
-              <CodeEdit onChange={this.handleChange} value={this.state.text}/>
-            </Fill>
-          </Appear>
-          <Appear>
-            <Fill style={{paddingLeft: "5px"}}>
-              <Heading size={5} caps textColor="primary">
-                Transformed
-              </Heading>
-              <CodeEdit value={this.transform(this.state.text)} readOnly/>
-            </Fill>
-          </Appear>
-        </Layout>
-      </div>
+      <TwoPane
+        leftHeading="JSX"
+        Left={<CodeEdit onChange={this.handleChange} value={this.state.text} lineNumbers={false}/>}
+        rightHeading="Transformed"
+        Right={<CodeEdit value={this.transform(this.state.text)} readOnly lineNumbers={false}/>}
+      />
     );
   }
 }
-
-// const Code = function ({children, source, lang = "jsx"}) {
-//   return (
-    // <Layout style={{ marginLeft: -200 }}>
-    //   <Fill style={{paddingRight: "5px"}}>
-    //     <CodePane
-    //       lang={lang}
-    //       source={source}
-    //     />
-    //   </Fill>
-    //   <Fill style={{paddingLeft: "5px"}}>
-    //     {children}
-    //   </Fill>
-    // </Layout>
-//   );
-// };
 
 export default Code;
