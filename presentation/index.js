@@ -104,6 +104,7 @@ export default class Presentation extends React.Component {
             <List textColor="secondary" textAlign="left">
               <Appear><ListItem><Markdown source="`< JSXElementName JSXAttributes(optional) / >`" /></ListItem></Appear>
               <Appear><ListItem>Strukturierung mit child-Elementen</ListItem></Appear>
+              <Appear><ListItem>Baumstruktur</ListItem></Appear>
             </List>
           </Slide>
 
