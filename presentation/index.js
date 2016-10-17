@@ -15,7 +15,7 @@ import {
   // Link,
   ListItem,
   List,
-  // Markdown,
+  Markdown,
   // Quote,
   Slide,
   Spectacle,
@@ -83,13 +83,16 @@ export default class Presentation extends React.Component {
             </List>
           </Slide>
 
-          <Slide bgColor="tertiary">
+          <Slide bgColor="tertiary" notes="Type-Safe, Errors werden während compilierung erkannt.">
             <Heading size={4} caps lineHeight={1.5} textColor="primary">
             Was ist JSX?
             </Heading>
             <List textColor="secondary" textAlign="left">
               <Appear><ListItem>XML-ähnliche Syntax-Erweiterung zu ECMAScript</ListItem></Appear>
               <Appear><ListItem>Wird von Preprozessoren transformiert</ListItem></Appear>
+              <Appear><ListItem>Optimierungen während Kompilierung in JS</ListItem></Appear>
+              <Appear><ListItem>Type-Safe</ListItem></Appear>
+              <Appear><ListItem>Vereinfacht Templating (HTML-Syntax)</ListItem></Appear>
               <Appear><ListItem>Besonders im Zusammenhang mit React zu finden</ListItem></Appear>
             </List>
           </Slide>
@@ -99,9 +102,8 @@ export default class Presentation extends React.Component {
             Bezug zu XML
             </Heading>
             <List textColor="secondary" textAlign="left">
-              <Appear><ListItem>Platzhalter</ListItem></Appear>
-              <Appear><ListItem>Platzhalter</ListItem></Appear>
-              <Appear><ListItem>Platzhalter</ListItem></Appear>
+              <Appear><ListItem><Markdown source="`< JSXElementName JSXAttributes(optional) / >`" /></ListItem></Appear>
+              <Appear><ListItem>Strukturierung mit child-Elementen</ListItem></Appear>
             </List>
           </Slide>
 
