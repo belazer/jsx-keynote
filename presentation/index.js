@@ -95,6 +95,7 @@ export default class Presentation extends React.Component {
               <Appear><ListItem>Type-Safe</ListItem></Appear>
               <Appear><ListItem>Vereinfacht Templating (HTML-Syntax)</ListItem></Appear>
               <Appear><ListItem>Besonders im Zusammenhang mit React zu finden</ListItem></Appear>
+              <Appear><ListItem>Auch React Native nutzt JSX</ListItem></Appear>
             </List>
           </Slide>
 
