@@ -73,18 +73,7 @@ export default class Presentation extends React.Component {
             </Text>
           </Slide>
 
-          <Slide bgColor="tertiary">
-            <Heading size={4} caps lineHeight={1.5} textColor="primary">
-            Inhalt
-            </Heading>
-            <List textColor="secondary" textAlign="left">
-              <Appear><ListItem>Was ist JSX?</ListItem></Appear>
-              <Appear><ListItem>Bezug zu XML</ListItem></Appear>
-              <Appear><ListItem>Beispiele</ListItem></Appear>
-            </List>
-          </Slide>
-
-          <Slide bgColor="tertiary" notes="Type-Safe, Errors werden während compilierung erkannt.">
+          <Slide bgColor="tertiary" notes="">
             <Heading size={4} caps lineHeight={1.5} textColor="primary">
             Was ist JSX?
             </Heading>
@@ -92,7 +81,6 @@ export default class Presentation extends React.Component {
               <Appear><ListItem>XML-ähnliche Syntax-Erweiterung zu ECMAScript</ListItem></Appear>
               <Appear><ListItem>Wird von Preprozessoren transformiert</ListItem></Appear>
               <Appear><ListItem>Optimierungen während Kompilierung in JS</ListItem></Appear>
-              <Appear><ListItem>Type-Safe</ListItem></Appear>
               <Appear><ListItem>Vereinfacht Templating (HTML-Syntax)</ListItem></Appear>
               <Appear><ListItem>Besonders im Zusammenhang mit React zu finden</ListItem></Appear>
               <Appear><ListItem>Auch React Native nutzt JSX</ListItem></Appear>
@@ -125,6 +113,9 @@ export default class Presentation extends React.Component {
                 <ListItem><Link href="https://github.com/treycordova/nativejsx">nativejsx (JSX without React)</Link></ListItem>
               </List>
             </Appear>
+          </Slide>
+          <Slide bgColor="tertiary">
+            <Code template={require('!raw!./TwoPane.js')} />
           </Slide>
         </Deck>
       </Spectacle>
